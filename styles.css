@@ -1,0 +1,246 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a2c57;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    max-width: 1200px;
+    width: 90%;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-section {
+    flex: 1;
+    padding: 40px;
+    background-color: #1a2c57;
+    color: white;
+    border-radius: 10px 0 0 10px;
+}
+
+.right-section {
+    flex: 1;
+    padding: 40px;
+    background: #ffffff;
+    color: #333333;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Footer Styling */
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Container for Credits */
+.credits-container {
+    background: rgba(0, 0, 0, 0.6); /* Dark background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+footer p {
+    font-size: 1.1em;
+    color: #fff;
+    margin: 0;
+}
+
+footer a {
+    color: #4D96FF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Password Generator */
+.password-generator {
+    text-align: left;
+}
+
+.password-types {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.type-button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #222216;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.type-button.selected {
+    background-color: #4a90e2;
+    color: rgb(230, 220, 220);
+}
+
+.type-button:hover {
+    background-color: #2ed21cd1;
+}
+
+/* Slider */
+.slider-container {
+    margin: 20px 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(to right, #ef1818, #3bcb0b);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #00b4fb;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: #000000;
+}
+
+.toggles {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Switch Style */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e72222;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(232, 223, 223);
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #086f06c9;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.password-display input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f7f7f7;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #357abd;
+}
+
+button:active {
+    background-color: #2a6b9a;
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section,
+    .right-section {
+        border-radius: 10px;
+    }
+
+    .right-section {
+        padding: 20px;
+    }
+
+    .type-button {
+        font-size: 12px;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        width: 18px;
+        height: 18px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Secure. Reliable. Effortless.</h1>
+            <p>Experience unparalleled security and ease with our innovative random password generator.</p>
+        </div>
+        <div class="right-section">
+            <div class="password-generator">
+                <h3>Choose password type</h3>
+                <div class="password-types">
+                    <button id="random" class="type-button selected">🔀 Random</button>
+                    <button id="memorable" class="type-button">💡 Memorable</button>
+                    <button id="pin" class="type-button"># PIN</button>
+                </div>
+                <h3>Customize your new password</h3>
+                <div class="slider-container">
+                    <label for="length-slider">Characters</label>
+                    <input id="length-slider" type="range" min="4" max="50" value="20">
+                    <span id="length-value">20</span>
+                </div>
+                <div id="random-options" class="toggles">
+                    <label class="switch">
+                        <input type="checkbox" id="include-uppercase" checked>
+                        <span class="slider round"></span>
+                        ABC
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="include-lowercase" checked>
+                        <span class="slider round"></span>
+                        abc
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="include-numbers" checked>
+                        <span class="slider round"></span>
+                        123
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="include-symbols" checked>
+                        <span class="slider round"></span>
+                        Symbols
+                    </label>
+                </div>
+                <h3>Generated password</h3>
+                <div class="password-display">
+                    <input id="password-field" type="text" readonly>
+                </div>
+                <div class="buttons">
+                    <button id="copy-password">Copy password</button>
+                    <button id="refresh-password">Refresh password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="credits-container">
+            <p>Credits to <a href="https://medium.com/@Linuxlearners" target="_blank">Linux Learners</a> for their resources.</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
