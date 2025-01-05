@@ -36,37 +36,6 @@ body {
     border-radius: 0 10px 10px 0;
 }
 
-/* Footer Styling */
-footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Container for Credits */
-.credits-container {
-    background: rgba(0, 0, 0, 0.6); /* Dark background */
-    padding: 10px 20px;
-    border-radius: 8px;
-    display: inline-block;
-}
-
-footer p {
-    font-size: 1.1em;
-    color: #fff;
-    margin: 0;
-}
-
-footer a {
-    color: #4D96FF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
 
 /* Password Generator */
 .password-generator {
